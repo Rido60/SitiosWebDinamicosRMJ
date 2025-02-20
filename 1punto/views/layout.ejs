@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jose Ricardo Mendez Jimenez">
+    <meta name="description" content="Sistema de Ventas en Linea">
+    <meta name="keywords" content="ventas, linea, tienda">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda en Linea</title>
+    <link rel="shortcut icon" href="icons/tienda-en-linea.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2c66a0ebd1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">      
+            <a href="index.html">
+                <img src="img/logo.png" class="logo">      
+            </a>
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/productos">Productos</a>
+                <a href="/listar">CRUD Productos</a>
+            
+            </nav>
+            <a href="#" class="hamb"><i class="fa-solid fa-bars"></i></a>
+        </div>
+    </header>
+    <main>
+        <%- body %> <!-- This is where the content of the view will be injected -->     
+    </main>
+    
+</body>
+</html>

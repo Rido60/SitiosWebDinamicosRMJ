@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: blue;
+            padding: 10px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        a {
+            text-decoration: none;
+            background-color: blue;
+            border-radius: 2px;
+            color: white;
+            padding: 5px;
+            margin: auto;
+            border: none;
+            font-size: 15px;
+        }
+        button {
+            background-color: red;
+            border: none;
+            border-radius: 2px;
+            color: white;
+            padding: 5px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <a href="/clients/new">Crear Nuevo Cliente</a>
+    <ul>
+        <% clients.forEach(client => { %>
+            <li>
+                <strong><%= client.nombres %></strong> - <%= client.correo %> 
+                (<%= client.ci %>) 
+                <a href="/clients/<%= client._id %>">Ver</a>
+                <a href="/clients/<%= client._id %>/edit">Editar</a>
+                <form action="/clients/<%= client._id %>?_method=DELETE" method="POST" style="display: inline;">
+                    <button type="submit">Eliminar</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

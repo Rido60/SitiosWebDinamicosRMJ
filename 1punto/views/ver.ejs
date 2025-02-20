@@ -1,0 +1,75 @@
+<style>
+
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .container .logo{
+        width: 200px;
+    }
+    /*esta sin nav*/
+    header .container nav a{
+        color: rgb(62, 32, 228);
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
+    #card{
+        width: 500px;
+        height: 600px;
+        margin: auto;
+        margin-top: 50px;   
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }	
+    
+    #card .imagen img{
+        width: 90%;
+        height: 60%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    h1{
+        font-size: 30px;
+        color: rgb(62, 32, 228);
+        margin-top: 20px;
+    }
+    .container{
+        width: 1140px;
+        margin: 0 auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        position: relative;
+    }
+    
+    </style>
+    <header>
+        <div class="container">
+            <img src="/img/logo.png" class="logo" alt="logo">
+            <nav>
+                <a href="/">Inicio</a>
+                <a href="/productos">Productos</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container" id="card">
+        <h1>Producto Seleccionado</h1>
+        <div class="imagen">
+            <img src="/img/productos/<%= producto.imagen %>" alt="imagen">
+        </div>
+        <div class="contenido">
+            <h2>
+                <%= producto.nombre %>
+                <br>
+                Bs.- <%= producto.precio %>
+                <br>
+                Caracteristicas: <%= producto.detalle %>
+            </h2>
+        </div>
+    
+    </div>
+    
+    

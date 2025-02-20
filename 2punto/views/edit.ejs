@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            text-align: center;
+            color: blue;
+            padding: 10px;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+            background-color:  rgb(234, 227, 241);
+            border-radius: 5px;
+        }
+        .btn {
+            background-color: rgb(179, 37, 72);
+            color: white;
+            padding: 10px;
+            
+            border-radius: 5px;
+            border: none;
+        }
+        label {
+            margin: 5px;
+        }
+        input {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid blue;
+        }
+        a {
+            text-decoration: none;
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+            border: none;
+            font-size: 12px;
+            width: 100%;
+            margin: 10px 0 10px 0;
+            padding: 10px 10px;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+    <form action="/clients/<%= client._id %>?_method=PUT" method="POST">
+        <label>CI: <input type="number" name="ci" value="<%= client.ci %>" required></label><br>
+        <label>Nombres: <input type="text" name="nombres" value="<%= client.nombres %>" required></label><br>
+        <label>Apellidos: <input type="text" name="apellidos" value="<%= client.apellidos %>" required></label><br>
+        <label>Celular: <input type="number" name="celular" value="<%= client.celular %>" required></label><br>
+        <label>Correo: <input type="email" name="correo" value="<%= client.correo %>" required></label><br>
+        <button type="submit" class="btn">Actualizar</button>
+        <a href="/">Regresar</a>
+    </form>
+    
+</body>
+</html>

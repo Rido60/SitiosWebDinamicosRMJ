@@ -1,0 +1,329 @@
+/* los estilos de la pagina web*/
+*{
+    box-sizing: border-box;
+}
+p{
+    color: black;
+    margin-top: 1px;
+    text-align: justify;
+}
+a{
+    display: inline-block;
+}
+h2{
+    color: rgb(62, 32, 228);
+}
+h3{
+    text-align: center;
+}
+
+/* para todas las paginas el header*/
+header{
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo{
+    width: 200px;
+}
+/*esta sin nav*/
+header .container nav a{
+    color: rgb(62, 32, 228);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+header .container .hamb{
+    display: none;
+    position: relative;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+}
+/*fuente de google fonts*/
+body{
+    font-family: "Roboto";
+}
+main .espacio{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-radius: 3px;
+    border: 2px solid rgb(71, 10, 238);
+    background-color: rgb(234, 227, 241);
+    margin: 10px 5px 5px 8px;
+
+}
+
+/* pagina index bloque servicio
+.servicio{
+    display: inline-block;
+    justify-content: space-evenly;
+    background-color: rgb(234, 240, 240);
+    margin: 5px 15px;
+    padding: 0 10px;
+}*/
+.servicio .linea{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row .icono-servicio{
+    width: 25px;
+}
+.columna{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.columna-33{
+    width: 33.33%;
+}
+#servicios .servicio{
+    background: linear-gradient(to bottom right, #e6e9e3, #eeeeed);
+    /*background-color: beige;*/
+    border-radius: 15px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    position: relative;
+}
+#servicios .servicio::before{
+    background: linear-gradient(to bottom right, #e6e9e3, #e6e9e3);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: translateY(15%) scale(0.85);
+    filter:  blur(10px);
+
+}
+#servicios .servicio:hover img{
+    background: linear-gradient(to bottom right, #389fa7, #69f0ea);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: translateY(15%) scale(0.85);
+    filter:  blur(30px);
+}
+
+/* pagina index  bloque inicio*/
+#inicio{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+#inicio img{
+    width: 50%;
+    height: 40%; 
+    padding: 0 15px;
+    margin: 20px 15px;
+}
+#inicio .bloque-inicio{
+    position: absolute;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    top: auto;
+    left: 50%;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* pagina productos tarjetas*/
+#productos .bloque-producto{
+    background-color: #e6e9e3;
+    border: 1px solid grey;
+    margin: 15px 5px ;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+#productos .bloque-producto::before{
+    background: linear-gradient(to right bottom, #c6c7c5, #a6a7a5);
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: translateY(15%) scale(0.85);
+    filter:  blur(15px);
+
+}
+.cuadrado-perfecto{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+}
+.cuadrado-perfecto img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bloque-img-producto.cuadrado-perfecto{
+    padding-bottom: 56.25%;
+}
+.bloque-producto-marca{
+    display: block;
+    margin: 15px 5px ;
+    justify-content: center;
+    align-items: center;
+
+}
+.bloque-producto-marca h3{
+    margin: 0;
+    padding: 5px;
+}
+
+
+/* pagina ubicacion*/
+#ubicacion .container{  
+    padding: auto auto;
+}
+
+#ubicacion iframe{
+    width: 100%;
+    height: 400px;
+    padding: 15px;
+}
+/* PAGINA BLOG*/
+#blog form{
+    padding: 15px 15px;
+    background-color: rgb(142, 199, 65);
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+}
+#blog form .form-block{
+    width: 100%;
+    margin-bottom: 15px;   
+}
+#blog form .form-block .form-control{
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+#blog form .form-block textarea{
+    display: block;
+    width: 100%;
+    height: 100px;
+    font-size: 16px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding: 5px 10px;
+    
+}
+#blog form .form-block.botton-blog{
+    
+    background-color:rgb(142, 199, 65);
+    
+    margin-bottom: 0;
+    padding: 10px;
+    
+}
+
+.boton.boton-verde{
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 6px;
+    display: inline-block;
+    background-color: white;
+    color: rgb(142, 199, 65);
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid rgb(10, 10, 10);
+    transition: background-color .3s;
+    padding: 5px 8px ;
+}
+.boton.boton-verde:hover{
+    background-color:rgb(203, 235, 162);
+    color: black;
+}
+
+/*footer*/
+footer{
+    /*background-color: rgb(229, 233, 241);*/
+    color:  rgb(62, 32, 228);
+    margin: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+    font-size: 12px;
+}
+footer .barra-footer{
+    background: linear-gradient(to right bottom, #c6c7c5, #a6a7a5);
+    color: rgb(31, 32, 32);
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    text-align: center;
+}
+.columna-25{
+    width: 25%;
+}
+footer ul{
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+    margin: 0;
+
+}
+footer ul li{
+    margin-bottom: 10px;
+}
+
+footer .redes{  
+    font-size: 25px;
+    display: flex;
+    padding: 0 0;
+}
+footer .redes a{
+    
+    margin: 0 20px;
+}
+
+footer h3{
+    text-align:start;
+}
+footer img{
+    display: grid;
+    width: 100%;
+    height: 85px;
+    place-items: center;
+}
